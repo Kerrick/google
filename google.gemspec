@@ -1,6 +1,7 @@
 Gem::Specification.new do |s|
   s.name = "google"
-  s.version = "0.0.0"
+  s.version = "0.0.1"
+  s.executables << 'google'
   s.date = "2012-05-23"
   s.summary = "Google Search on the command line"
   s.description = "A ruby gem to give you the power of Google Search in your command line."
