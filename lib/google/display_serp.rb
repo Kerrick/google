@@ -16,11 +16,8 @@ class Google
     result_array.each_with_index do | result, i |
       this_num = (i + query_strings[:start] + 1).to_s
 
-      if this_num.length < max_result.to_s.length
-        serp_title = "\n#{' ' * (max_result.to_s.length - this_num.length)}[bold][blue]#{this_num}. "
-      else
-        serp_title  = "\n[bold][blue]#{this_num}. "
-      end
+      serp_title  = "\n#{' ' * (max_result.to_s.length - this_num.length)}"
+      serp_title << "[bold][blue]#{this_num}. "
       serp_title << "[normal]#{result["titleNoFormatting"]}[/]\n"
       serp_url    = ' ' * max_result.to_s.length
       serp_url   << "[green]#{result["url"]}[/]\n"
