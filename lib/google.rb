@@ -1,4 +1,4 @@
-require 'google/trollop/lib/trollop'
+require 'trollop'
 require 'google/utils'
 require 'google/search'
 require 'google/request'
@@ -8,7 +8,7 @@ require 'google/grab'
 require 'google/pipe-view'
 
 opts = Trollop::options do
-  version "google v1.0.2 (c) 2012 Kerrick Long http://kerrick.github.com/google"
+  version "google v1.0.3 (c) 2012 Kerrick Long http://kerrick.github.com/google"
   banner <<-EOM
 The google gem is a simple tool to search Gooogle with via a CLI.
 Usage:
