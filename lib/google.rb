@@ -8,7 +8,7 @@ require_relative 'google/grab'
 require_relative 'google/pipe-view'
 
 opts = Trollop::options do
-  version "google v1.0.0-beta2 (c) 2012 Kerrick Long http://kerrick.github.com/google"
+  version "google v1.0.0 (c) 2012 Kerrick Long http://kerrick.github.com/google"
   banner <<-EOM
 The google gem is a simple tool to search Gooogle with via a CLI.
 Usage:
@@ -53,6 +53,9 @@ query = ARGV.join(' ')
 raise Trollop::die "no search query specified" if query.empty?
 
 opts[:result] = 1 if opts[:lucky]
+if !opts[:readability] && opts[:markdown]
+  raise Trollop::die "Must use --no-markdown if you use --no-readability"
+end
 
 g = Google.new query, opts
 g.search
