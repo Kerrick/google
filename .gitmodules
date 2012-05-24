@@ -1,0 +1,3 @@
+[submodule "lib/reverse-markdown"]
+	path = lib/reverse-markdown
+	url = git://github.com/Kerrick/reverse-markdown.git
