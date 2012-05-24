@@ -27,7 +27,6 @@ class Google
       Formatador.display_line coder.decode(Utils::wrap(serp_title, :prefix => max_result.to_s.length + 2))
       Formatador.display_line coder.decode(Utils::wrap(serp_url, :prefix => max_result.to_s.length + 2))
       Formatador.display_line coder.decode(Utils::wrap(serp_desc, :prefix => max_result.to_s.length + 2))
-      Formatador.display_line "[/]"
     end
 
     metadata = ''
