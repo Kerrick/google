@@ -54,7 +54,7 @@ Typing `google --help` will list all the available commands. They are also liste
 
 * You can pipe a result into another unix command! At the prompt, type the number of the result, followed by a pipe as normal. Note that utilities such as `less` and `more` that need to control the display don't work.
 
-    > 3 | espeak -a 200 -v en-us
+    \> 3 | espeak -a 200 -v en-us
 
 ## Supported Ruby Versions
 
