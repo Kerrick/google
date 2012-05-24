@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "google"
-  s.version = "1.0.0"
+  s.version = "1.0.4"
   s.executables << 'google'
   s.add_runtime_dependency "json", ["~> 1"]
   s.add_runtime_dependency "htmlentities", ["~> 4"]
@@ -12,5 +12,8 @@ Gem::Specification.new do |s|
   s.authors = ["Kerrick Long"]
   s.email = "me@kerricklong.com"
   s.files = ["lib/google.rb"]
+  s.files += %w(LICENSE.md README.md google.gemspec)
+  s.files += Dir.glob("lib/**/*.rb")
+  s.files += Dir.glob("bin/**/*")
   s.homepage = "http://kerrick.github.com/google/"
 end

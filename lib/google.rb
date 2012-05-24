@@ -8,7 +8,7 @@ require_relative 'google/grab'
 require_relative 'google/pipe-view'
 
 opts = Trollop::options do
-  version "google v1.0.0 (c) 2012 Kerrick Long http://kerrick.github.com/google"
+  version "google v1.0.3 (c) 2012 Kerrick Long http://kerrick.github.com/google"
   banner <<-EOM
 The google gem is a simple tool to search Gooogle with via a CLI.
 Usage:
