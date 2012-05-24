@@ -35,9 +35,10 @@ class Google
         if info[:query_strings][:start] <= num &&
            info[:query_strings][:start] + @opts[:size] > num
           if str[3].nil?
-            view result_array[num]['url']
+            view result_array[num - info[:query_strings][:start]]['url']
           else
-            pipe str[3].strip, result_array[num]['url']
+            pipe str[3].strip,
+                 result_array[num - info[:query_strings][:start]]['url']
           end
         else
           Formatador.display Utils::wrap("[yellow]! Result not on this page.")
