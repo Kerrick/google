@@ -13,8 +13,10 @@ class Google
     Formatador.display_line "[yellow]Powered by Google[/]"
 
     result_array.each_with_index do | result, i |
+      this_num = (i + query_strings[:start] + 1).to_s
+
       serp = ''
-      serp << "\n[bold][blue][#{(i + 1).to_s}] #{result["titleNoFormatting"]}[/]\n"
+      serp << "\n[bold][blue][#{this_num}] #{result["titleNoFormatting"]}[/]\n"
       serp << "[green]#{result["url"]}[/]\n"
       serp << result["content"].gsub(/<b>/, "[bold]").gsub(/<\/b>/, "[/]").squeeze(" ")
 
@@ -24,10 +26,11 @@ class Google
 
     metadata = ''
     metadata << "\n[yellow]Displaying results "
-    metadata << "#{query_strings[:start]} through "
+    metadata << "#{query_strings[:start] + 1} through "
     metadata << "#{query_strings[:start] + query_strings[:rsz]} of "
     metadata << "#{estimated_results} "
     metadata << "(Page #{current_page})"
+
     Formatador.display_line metadata
   end
 end
