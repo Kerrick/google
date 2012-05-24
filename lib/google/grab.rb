@@ -1,6 +1,6 @@
 require 'open-uri'
 require 'ruby-readability'
-require '../reverse-markdown/reverse_markdown'
+require 'google/reverse-markdown/reverse_markdown'
 
 class Google
   def grab url

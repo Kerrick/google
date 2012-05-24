@@ -1,6 +1,6 @@
 [submodule "lib/reverse-markdown"]
-	path = lib/reverse-markdown
+	path = lib/google/reverse-markdown
 	url = git://github.com/Kerrick/reverse-markdown.git
 [submodule "lib/trollop"]
-	path = lib/trollop
+	path = lib/google/trollop
 	url = git://gitorious.org/trollop/mainline.git

@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "google"
-  s.version = "1.0.1"
+  s.version = "1.0.2"
   s.executables << 'google'
   s.add_runtime_dependency "json", ["~> 1"]
   s.add_runtime_dependency "htmlentities", ["~> 4"]
