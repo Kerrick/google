@@ -11,26 +11,18 @@ The CLI displays results from the [Google Web Search API](https://developers.goo
 
 ## Usage Examples
 
-Typing `google help` will list all the available commands. They are also listed here.
+Typing `google --help` will list all the available commands. They are also listed here.
 
-    USAGE:
-      google [--lucky | -l] [--result=<num>] [--page=<num>] [--size=<num>] "Query"
-
-    OPTIONS
-        --lucky, -l
-            Just show the contents of the first result. I'm feeling lucky!
-            Synonym of --result=1
-
-        --result=<num>
-            Just show the contents of the <num>th result.
-
-        --page=<num>
-            Start by showing the <num>th page of results.
-            Defaults to 1.
-
-        --size=<num>
-            Show <num> results on each page. Must be between 1 and 8.
-            Defaults to 4.
+    The google gem is a simple tool to search Gooogle with via a CLI.
+    Usage:
+        google [options] "my search query string here"
+    where [options] are:
+        --page, -p <i>:   Start by showing the <i>th result page. (Default: 1)
+        --size, -s <i>:   Show <i> results on each SERP. Must be between 1 and 8. (Default: 4)
+      --result, -r <i>:   Skip the SERP and show the <i>th result.
+           --lucky, -l:   I'm feeling lucky! Skip the SERP and show the first result. (Alias to --result 1)
+         --version, -v:   Print the version and exit.
+            --help, -h:   Show this information and exit.
 
 ### I'm Feeling Lucky into Less
 

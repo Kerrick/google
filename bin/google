@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'google'
+require_relative '../lib/google'
+
+# Trollop::die "This is a fancy trollop die message."

@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "google"
-  s.version = "0.0.1"
+  s.version = "0.0.2"
   s.executables << 'google'
   s.date = "2012-05-23"
   s.summary = "Google Search on the command line"
