@@ -47,5 +47,7 @@ class Google
     metadata << "#{estimated_results} "
     metadata << "(Page #{current_page})"
     Formatador.display_line metadata
+
+    input info, result_array
   end
 end

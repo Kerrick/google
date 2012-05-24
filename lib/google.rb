@@ -3,9 +3,11 @@ require_relative 'google/utils'
 require_relative 'google/search'
 require_relative 'google/request'
 require_relative 'google/display_serp'
+require_relative 'google/input'
+require_relative 'google/grab'
 
 opts = Trollop::options do
-  version "google v0.0.3 (c) 2012 Kerrick Long http://kerrick.github.com/google"
+  version "google v1.0.0-beta.1 (c) 2012 Kerrick Long http://kerrick.github.com/google"
   banner <<-EOM
 The google gem is a simple tool to search Gooogle with via a CLI.
 Usage:
@@ -30,6 +32,14 @@ EOM
   opt :lucky,
       "I'm feeling lucky! Skip the SERP and show the first result. " +
       "(Alias to --result 1)"
+
+  opt :readability,
+      "Filter the results through readability to get rid of extra content.",
+      :default => true
+
+  opt :markdown,
+      "Change the results from raw HTML to markdown.",
+      :default => true
 
   opt :version,
       "Print the version and exit."

@@ -17,12 +17,14 @@ Typing `google --help` will list all the available commands. They are also liste
     Usage:
         google [options] "my search query string here"
     where [options] are:
-        --page, -p <i>:   Start by showing the <i>th result page. (Default: 1)
-        --size, -s <i>:   Show <i> results on each SERP. Must be between 1 and 8. (Default: 4)
-      --result, -r <i>:   Skip the SERP and show the <i>th result.
-           --lucky, -l:   I'm feeling lucky! Skip the SERP and show the first result. (Alias to --result 1)
-         --version, -v:   Print the version and exit.
-            --help, -h:   Show this information and exit.
+            --page, -p <i>:   Start by showing the <i>th result page. (Default: 1)
+            --size, -s <i>:   Show <i> results on each SERP. Must be between 1 and 8. (Default: 4)
+          --result, -r <i>:   Skip the SERP and show the <i>th result.
+               --lucky, -l:   I'm feeling lucky! Skip the SERP and show the first result. (Alias to --result 1)
+      --no-readability, -e:   Filter the results through readability to get rid of extra content. (Default: true)
+         --no-markdown, -m:   Change the results from raw HTML to markdown. (Default: true)
+             --version, -v:   Print the version and exit.
+                --help, -h:   Show this information and exit.
 
 ### I'm Feeling Lucky into Less
 
@@ -48,57 +50,8 @@ Typing `google --help` will list all the available commands. They are also liste
 
 * Results pages are formatted to look like a Google SERP, including colors, domains, descriptions, and bold search matches. (Shoutout to [formatador](https://github.com/geemus/formatador)!)
 
-## Screenshots
-
-![SERP](https://github.com/Kerrick/google/raw/master/screenshots/serp.png)
-![Readability](https://github.com/Kerrick/google/raw/master/screenshots/readability.png)
-
-## History
-
-This project is inspired by the [t gem](https://github.com/sferik/t), which provides a CLI for twitter.
-
-## Contributing
-
-In the spirit of [free software](http://www.gnu.org/philosophy/free-sw.html), **everyone** is encouraged to help improve this project.
-
-Here are some ways _you_ can contribute:
-
-* By using the rolling [development branch](https://github.com/Kerrick/google/tree/develop).
-
-* By [reporting bugs][issues]
-
-* By [suggesting new features][issues]
-
-* By writing or editing documentation
-
-* By writing code (**no patch is too small**; fix typos, add comments, clean up inconsistent whitespace...)
-
-* By refactoring code
-
-* By fixing [issues][issues]
-
-* By reviewing [patches][pulls]
-
-[issues]: https://github.com/Kerrick/google/issues
-[pulls]: https://github.com/Kerrick/google/pulls
-
-
-## Submitting an Issue
-
-We use the [GitHub issue tracker][issues] to track bugs and features. Before submitting a bug report or feature request, check to make sure it hasn't already been submitted. When submitting a bug report, please include any relevant output from the program and any details that may be necessary to reproduce the bug, including your gem version, Ruby version, and operating system.
-
-## Submitting a Pull Request
-
-0. [Fork the repository.][fork]
-0. [Create a topic branch.][branch]
-0. Implement your changes.
-0. Test your changes heavily.
-0. Add, commit, and push your changes.
-0. [Submit a pull request.][pr]
-
-[fork]: http://help.github.com/fork-a-repo/
-[branch]: http://learn.github.com/p/branching.html
-[pr]: http://help.github.com/send-pull-requests/
+* You can pipe a result into another unix command! At the prompt, type the number of the result, followed by a pipe as normal. Note that utilities such as `less` and `more` that need to control the display don't work.
+        > 3 | espeak -a 200 -v en-us
 
 ## Supported Ruby Versions
 
@@ -114,16 +67,18 @@ Copyright (c) 2012 Kerrick Long. See [LICENSE](https://github.com/Kerrick/google
 
 ### Dependencies
 
-* [Ruby Readability](https://github.com/iterationlabs/ruby-readability)
+* [Ruby Readability](https://github.com/iterationlabs/ruby-readability) (gem)
 
     * [Nokogiri](http://nokogiri.org/)
 
     * [guess_html_encoding](https://github.com/iterationlabs/guess_html_encoding)
 
-* [JSON Implementation for Ruby](http://flori.github.com/json/)
+* [JSON Implementation for Ruby](http://flori.github.com/json/) (gem)
 
-* [Formatador](https://github.com/geemus/formatador)
+* [Formatador](https://github.com/geemus/formatador) (gem)
 
-* [HTML Entities for Ruby](http://htmlentities.rubyforge.org/)
+* [HTML Entities for Ruby](http://htmlentities.rubyforge.org/) (gem)
 
-* [Reverse Markdown](https://github.com/xijo/reverse_markdown)
+* [Reverse Markdown](https://github.com/xijo/reverse_markdown) (lib)
+
+* [Trollop](http://trollop.rubyforge.org/) (lib)
