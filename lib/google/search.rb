@@ -11,9 +11,16 @@ class Google
   end
 
   def search
-    results = request :q => @query,
-                      :rsz => @opts[:size],
-                      :start => ((@opts[:page] - 1) * @opts[:size])
-    display_serp results
+    if @opts[:result]
+      results = request :q => @query,
+                        :rsz => 1,
+                        :start => @opts[:result]
+      view results[:results]['responseData']['results'][0]['url']
+    else
+      results = request :q => @query,
+                        :rsz => @opts[:size],
+                        :start => ((@opts[:page] - 1) * @opts[:size])
+      display_serp results
+    end
   end
 end
