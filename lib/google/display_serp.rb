@@ -16,7 +16,8 @@ class Google
       this_num = (i + query_strings[:start] + 1).to_s
 
       serp = ''
-      serp << "\n[bold][blue][#{this_num}] #{result["titleNoFormatting"]}[/]\n"
+      serp << "\n[bold][blue][#{this_num}] "
+      serp << "[normal]#{result["titleNoFormatting"]}[/]\n"
       serp << "[green]#{result["url"]}[/]\n"
       serp << result["content"].gsub(/<b>/, "[bold]").gsub(/<\/b>/, "[/]").squeeze(" ")
 
