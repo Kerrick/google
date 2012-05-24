@@ -1,4 +1,4 @@
-require 'trollop'
+require_relative 'google/trollop'
 require_relative 'google/utils'
 require_relative 'google/search'
 require_relative 'google/request'
