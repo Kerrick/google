@@ -9,7 +9,7 @@ The CLI displays results from the [Google Web Search API](https://developers.goo
 
 ## Installation
 
-    gem install google # Requires Ruby :)
+    gem install google # Requires Ruby 1.9
 
 ## Usage Examples
 
