@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/google'
+require 'google'
 
 opts = Trollop::options do
-  version "google v1.0.9 (c) 2012 Kerrick Long http://kerrick.github.com/google"
+  version "google v1.0.10 (c) 2012 Kerrick Long http://kerrick.github.com/google"
   banner <<-EOM
 The google gem is a simple tool to search Gooogle with via a CLI.
 Usage:
