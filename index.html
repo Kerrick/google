@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Google by Kerrick</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/Kerrick/google">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/Kerrick/google/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/Kerrick/google/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Google</h1>
+          <p>A ruby gem to give you the power of Google Search in your command line.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/Kerrick">Kerrick</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>google</h1>
+
+<h2>The power of Google Search in your command line.</h2>
+
+<p>The CLI displays results from the <a href="https://developers.google.com/web-search/">Google Web Search API</a>, allows you to page through the results, and choose a page to view, all without leaving the command line.</p>
+
+<p><a href="https://rubygems.org/gems/google">Hosted on RubyGems</a>.</p>
+
+<p><a href="https://github.com/Kerrick/google/raw/master/screenshots/example_01.gif" title="Click to view full size"><img src="https://github.com/Kerrick/google/raw/master/screenshots/example_01.gif" alt="Screenshot of `google` in action!"></a></p>
+
+<h2>Installation</h2>
+
+<pre><code>gem install google # Requires Ruby 1.9
+</code></pre>
+
+<h2>Usage Examples</h2>
+
+<p>Typing <code>google --help</code> will list all the available commands. They are also listed here.</p>
+
+<pre><code>The google gem is a simple tool to search Gooogle with via a CLI.
+Usage:
+    google [options] "my search query string here"
+where [options] are:
+        --page, -p &lt;i&gt;:   Start by showing the &lt;i&gt;th result page. (Default: 1)
+        --size, -s &lt;i&gt;:   Show &lt;i&gt; results on each SERP. Must be between 1 and 8. (Default: 4)
+      --result, -r &lt;i&gt;:   Skip the SERP and show the &lt;i&gt;th result.
+           --lucky, -l:   I'm feeling lucky! Skip the SERP and show the first result. (Alias to --result 1)
+  --no-readability, -e:   Filter the results through readability to get rid of extra content. (Default: true)
+     --no-markdown, -m:   Change the results from raw HTML to markdown. (Default: true)
+         --version, -v:   Print the version and exit.
+            --help, -h:   Show this information and exit.
+</code></pre>
+
+<h3>I'm Feeling Lucky into Less</h3>
+
+<pre><code>google -l 'how to install nvidia drivers debian squeeze' | less
+</code></pre>
+
+<h3>Search on a single site</h3>
+
+<pre><code>google 'site:randsinrepose.com NADD'
+</code></pre>
+
+<h3>Vanity Search</h3>
+
+<pre><code>google '"Kerrick Long" -inurl:kerrick -inurl:kerricklong'
+</code></pre>
+
+<h2>Features</h2>
+
+<ul>
+<li><p>You have access to all the <a href="http://support.google.com/websearch/bin/answer.py?hl=en&amp;answer=136861">search operators</a> you've come to know and love in Google Search.</p></li>
+<li><p>If using the <code>--lucky</code> or <code>--result</code> flags, you can pipe the results into any other unix command.</p></li>
+<li><p>Results are filtered through <a href="http://www.readability.com/">Readability</a>, so you only get the relevant content. (Shoutout to <a href="https://github.com/iterationlabs/ruby-readability">Ruby Readability</a>!)</p></li>
+<li><p>Results are shown in <a href="http://daringfireball.net/projects/markdown/">markdown</a> for a good balance between legibility and document heirarchy. (Shoutout to <a href="https://github.com/xijo/reverse_markdown">reverse_markdown</a>!)</p></li>
+<li><p>Results pages are formatted to look like a Google SERP, including colors, domains, descriptions, and bold search matches. (Shoutout to <a href="https://github.com/geemus/formatador">formatador</a>!)</p></li>
+<li><p>You can pipe a result into another unix command! At the prompt, type the number of the result, followed by a pipe as normal. Note that utilities such as <code>less</code> and <code>more</code> that need to control the display don't work.</p></li>
+</ul><p>For example,</p>
+
+<pre><code>Enter N or P for pagination, E or Q to quit, or a number to see that result.
+&gt; 3 | espeak -a 200 -v en-us
+</code></pre>
+
+<h2>Supported Ruby Versions</h2>
+
+<p>This library has only been tested against Ruby 1.9.3. Other versions might be supported, but they haven't been tested.</p>
+
+<h2>Acknowledgements</h2>
+
+<p>This gem is <a href="http://www.google.com">Powered by Google</a>.</p>
+
+<h3>Copyright</h3>
+
+<p>Copyright (c) 2012 Kerrick Long. See <a href="https://github.com/Kerrick/google/blob/master/LICENSE.md">LICENSE</a> for details.</p>
+
+<h3>Dependencies</h3>
+
+<ul>
+<li><p><a href="http://trollop.rubyforge.org/">Trollop</a> (gem)</p></li>
+<li>
+<p><a href="https://github.com/iterationlabs/ruby-readability">Ruby Readability</a> (gem)</p>
+
+<ul>
+<li><a href="http://nokogiri.org/">Nokogiri</a></li>
+<li><a href="https://github.com/iterationlabs/guess_html_encoding">guess_html_encoding</a></li>
+</ul>
+</li>
+<li><p><a href="http://flori.github.com/json/">JSON Implementation for Ruby</a> (gem)</p></li>
+<li><p><a href="https://github.com/geemus/formatador">Formatador</a> (gem)</p></li>
+<li><p><a href="http://htmlentities.rubyforge.org/">HTML Entities for Ruby</a> (gem)</p></li>
+<li><p><a href="https://github.com/xijo/reverse_markdown">Reverse Markdown</a> (lib)</p></li>
+</ul>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-18432597-12");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
