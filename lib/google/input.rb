@@ -9,7 +9,12 @@ class Google
     Formatador.display Utils::wrap(prompt)
 
     Formatador.display "\n[bold]>[/] "
-    choice = STDIN.gets.chomp + ' '
+    choice = STDIN.gets
+    if choice.nil?
+      choice = ' '
+    else
+      choice.chomp + ' '
+    end
 
     case
     when choice[0].downcase == 'e' || choice[0].downcase == 'q'
@@ -46,7 +51,7 @@ class Google
         end
       end
     else
-      input info
+      input info, result_array
     end
   end
 end
