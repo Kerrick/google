@@ -1,7 +1,8 @@
 Gem::Specification.new do |s|
   s.name = "google"
-  s.version = "1.0.8"
+  s.version = "1.0.9"
   s.executables << 'google'
+  s.add_runtime_dependency "trollop", ["~> 1"]
   s.add_runtime_dependency "json", ["~> 1"]
   s.add_runtime_dependency "htmlentities", ["~> 4"]
   s.add_runtime_dependency "formatador", ["~> 0.2"]
