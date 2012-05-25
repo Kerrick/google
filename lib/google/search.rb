@@ -14,7 +14,7 @@ class Google
     if @opts[:result]
       results = request :q => @query,
                         :rsz => 1,
-                        :start => @opts[:result]
+                        :start => (@opts[:result] - 1)
       view results[:results]['responseData']['results'][0]['url']
     else
       results = request :q => @query,
