@@ -7,6 +7,8 @@ The CLI displays results from the [Google Web Search API](https://developers.goo
 
 [Hosted on RubyGems](https://rubygems.org/gems/google).
 
+[![Screenshot of `google` in action!](https://github.com/Kerrick/google/raw/master/screenshots/example_01.gif)](https://github.com/Kerrick/google/raw/master/screenshots/example_01.gif "Click to view full size")
+
 ## Installation
 
     gem install google # Requires Ruby 1.9
@@ -54,7 +56,10 @@ Typing `google --help` will list all the available commands. They are also liste
 
 * You can pipe a result into another unix command! At the prompt, type the number of the result, followed by a pipe as normal. Note that utilities such as `less` and `more` that need to control the display don't work.
 
-    \> 3 | espeak -a 200 -v en-us
+For example,
+
+    Enter N or P for pagination, E or Q to quit, or a number to see that result.
+    > 3 | espeak -a 200 -v en-us
 
 ## Supported Ruby Versions
 
@@ -70,6 +75,8 @@ Copyright (c) 2012 Kerrick Long. See [LICENSE](https://github.com/Kerrick/google
 
 ### Dependencies
 
+* [Trollop](http://trollop.rubyforge.org/) (gem)
+
 * [Ruby Readability](https://github.com/iterationlabs/ruby-readability) (gem)
 
     * [Nokogiri](http://nokogiri.org/)
@@ -83,5 +90,3 @@ Copyright (c) 2012 Kerrick Long. See [LICENSE](https://github.com/Kerrick/google
 * [HTML Entities for Ruby](http://htmlentities.rubyforge.org/) (gem)
 
 * [Reverse Markdown](https://github.com/xijo/reverse_markdown) (lib)
-
-* [Trollop](http://trollop.rubyforge.org/) (lib)
