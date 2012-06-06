@@ -65,6 +65,10 @@ For example,
 
 This library has only been tested against Ruby 1.9.3. Other versions might be supported, but they haven't been tested.
 
+## Notable Forks
+
+* [21croissants/google](https://github.com/21croissants/google): Google Search in your command line, then copy a search result link to your clipboard (OS X, Linux, Win) 
+
 ## Acknowledgements
 
 This gem is [Powered by Google](http://www.google.com).
