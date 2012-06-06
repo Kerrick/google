@@ -19,3 +19,5 @@ doc/
 
 # Sublime Text
 *.sublime-*
+
+.rvmrc
