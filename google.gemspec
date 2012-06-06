@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "google-copy-link"
-  s.version     = "1.0.0"
+  s.version     = "0.0.1"
   s.executables << 'goo'
   s.add_runtime_dependency "trollop", ["~> 1"]
   s.add_runtime_dependency "json", ["~> 1"]

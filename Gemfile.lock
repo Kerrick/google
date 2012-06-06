@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    google-copy-link (1.0.0)
+    google-copy-link (0.0.1)
       clipboard (~> 1.0.1)
       formatador (~> 0.2)
       htmlentities (~> 4)
