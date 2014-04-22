@@ -54,7 +54,7 @@ class Google
 
       serp_title  = "\n#{' ' * (max_result.to_s.length - this_num.length)}[bold][blue]#{this_num}. "\
                     "[normal]#{result["titleNoFormatting"]}[/]\n"
-      serp_url    = "#{' ' * max_result.to_s.length}[green]#{result["url"]}[/]\n"
+      serp_url    = "#{' ' * max_result.to_s.length}[green]#{result["unescapedUrl"]}[/]\n"
       serp_desc   = ' ' * max_result.to_s.length + result["content"].gsub(/<b>/, "[bold]").gsub(/<\/b>/, "[/]").squeeze(" ")
 
       Formatador.display_line coder.decode(Utils::wrap(serp_title, :prefix => max_result.to_s.length + 2))
