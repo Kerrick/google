@@ -3,7 +3,7 @@ google
 
 ## The power of Google Search in your command line.
 
-The CLI displays results from the [Google Web Search API](https://developers.google.com/web-search/), allows you to page through the results, and choose a page to view, all without leaving the command line.
+The CLI display results from the [Google Web Search API](https://developers.google.com/web-search/), allows you to page through the results, and choose a page to view, all without leaving the command line.
 
 [Hosted on RubyGems](https://rubygems.org/gems/google).
 
@@ -54,7 +54,7 @@ Typing `google --help` will list all the available commands. They are also liste
 
 * Results pages are formatted to look like a Google SERP, including colors, domains, descriptions, and bold search matches. (Shoutout to [formatador](https://github.com/geemus/formatador)!)
 
-* You can pipe a result into another unix command! At the prompt, type the number of the result, followed by a pipe as normal. Note that utilities such as `less` and `more` that need to control the display don't work.
+* You can pipe a result into a another unix command! At the prompt, type the number of the result, followed by a pipe as normal. Note that utilities such as `less` and `more` that need to control the display don't work.
 
 For example,
 
